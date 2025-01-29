@@ -3,17 +3,17 @@ body {
     background-color: #fafafa;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center elements vertically */
-    height: auto; /* Adjust height to account for footer */
+    align-items: center; 
+    height: auto;
     margin: 0;
     padding-top: 100px;
-    gap: 50px; /* Add some distance between elements */
-    flex-direction: row; /* Align elements in one line */
+    gap: 50px; 
+    flex-direction: row; 
 }
 .container {
     
     text-align: center;
-    width: 18%; /* Set width to 50% */
+    width: 18%; 
     height: auto;
 }
 .cont1 {
@@ -29,13 +29,13 @@ body {
 }
 
 #phone-photo {
-    width: 23%; /* Set width to 33% */
+    width: 23%; 
     height: auto;
 }
 input[type="text"], input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin: 5px auto; /* Add equal margins on both sides */
+    margin: 5px auto;
     border: 1px solid #dbdbdb;
     border-radius: 3px;
     box-sizing: border-box;
