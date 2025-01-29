@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center elements vertically */
+    height: auto; /* Adjust height to account for footer */
+    margin: 0;
+    padding-top: 100px;
+    gap: 50px; /* Add some distance between elements */
+    flex-direction: row; /* Align elements in one line */
+}
+.container {
+    
+    text-align: center;
+    width: 18%; /* Set width to 50% */
+    height: auto;
+}
+.cont1 {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.cont2 {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    padding:  5px;
+}
+
+#phone-photo {
+    width: 23%; /* Set width to 33% */
+    height: auto;
+}
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px auto; /* Add equal margins on both sides */
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #0095f6;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #8e8e8e;
+}
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #dbdbdb;
+    margin: 0 10px;
+}
+.facebook-login {
+    color: #0165E1;
+    text-decoration: none;
+    font-weight: bold;
+}
+.facebook-login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forgot-password {
+    color: #0c64b6;
+    text-decoration: none;
+    font-size: 14px;
+}
+.signup {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    color: #8e8e8e;
+    text-align: center;
+}
+footer a, #language-select {
+    color: #8e8e8e;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 1.3em;
+    background: none;
+    border: none; 
+    cursor: pointer;
+    appearance: none;
+    padding: 0;
+    font-family: inherit;
+}
+#language-select {
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5H7z" fill="%238e8e8e"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 20px;
+    padding-right: 20px;
+    border-radius: 0;
+    font-size: 1.1em;
+}
+span {
+    font-weight:600;
+}
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-wrap: wrap;
+}
