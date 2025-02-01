@@ -113,6 +113,9 @@ footer a, #language-select {
     border-radius: 0;
     font-size: 1.1em;
 }
+#language-select:focus {
+    outline: none;
+}
 span {
     font-weight:600;
 }
