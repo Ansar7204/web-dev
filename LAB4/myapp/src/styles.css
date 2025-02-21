@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+/* Ensure the html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the app root a flex container that fills the viewport */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,6 +27,15 @@ body {
     padding: 15px;
     font-size: 24px;
   }
+  header::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(to right, #007bff, #ffffff, #007bff);
+    margin-top: 10px; 
+  }
+  
   
   footer {
     background-color: #343a40;
