@@ -1,0 +1,21 @@
+<div class="product-item">
+  <img [src]="product.image" [alt]="product.name">
+  <div class="details">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <p>Rating: {{ product.rating }}</p>
+    <p>Likes: {{ product.likes }}</p>
+
+    <a [href]="product.link" target="_blank" class="view-btn">View on Kaspi</a>
+
+    <div class="primary-actions">
+      <button (click)="onLike()" class="like-btn">Like</button>
+      <button (click)="onRemove()" class="remove-btn">Remove</button>
+    </div>
+
+    <div class="share-buttons">
+      <button (click)="share(product, 'whatsapp')" class="whatsapp-btn">Share on WhatsApp</button>
+      <button (click)="share(product, 'telegram')" class="telegram-btn">Share on Telegram</button>
+    </div>
+  </div>
+</div>

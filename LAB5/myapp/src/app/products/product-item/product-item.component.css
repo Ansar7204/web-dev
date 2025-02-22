@@ -1,0 +1,104 @@
+.product-item {
+    
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    margin: 10px;
+  }
+  
+  .product-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 5px;
+    object-fit: contain;  
+  background-color: #f8f9fa; 
+  }
+  
+  .product-item .details {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .product-item .details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .product-item .details p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  .primary-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top:20px;
+    justify-content: center;
+  }
+  
+  
+  .share-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .share-buttons button {
+    flex: 1;
+  }
+  
+  .view-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .like-btn {
+    background-color: red;
+    color: #fff;
+  }
+  
+  .remove-btn {
+    background-color: #ccc; 
+    color: #000;
+  }
+  
+  .whatsapp-btn {
+    background-color: green;
+    color: #fff;
+  }
+  
+  .telegram-btn {
+    background-color: blue;
+    color: #fff;
+  }
+  
+  
+  button:hover {
+    opacity: 0.9;
+    scale: 1.02;
+  }
