@@ -1,1 +1,11 @@
-<p>album-photos works!</p>
+<h2>Album Photos</h2>
+
+<div class="photo-grid">
+  <div *ngFor="let photo of photos" class="photo-card">
+    <img [src]="photo.thumbnailUrl" [alt]="photo.body" />
+    <p>{{ photo.body }}</p>
+  </div>
+</div>
+
+<button (click)="goBack()">Return</button>
+

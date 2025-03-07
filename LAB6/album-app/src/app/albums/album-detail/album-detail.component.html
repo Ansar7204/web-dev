@@ -1,1 +1,18 @@
-<p>album-detail works!</p>
+<h2>Album Details</h2>
+
+<div *ngIf="album">
+  <p><strong>Album ID:</strong> {{ album.id }}</p>
+  <p><strong>User ID:</strong> {{ album.userId }}</p>
+
+  <label>
+    <strong>Title:</strong>
+    <input [(ngModel)]="editedTitle" />
+  </label>
+
+  <button (click)="saveTitle()">Save</button>
+  <button (click)="goBack()">Return</button>
+
+  <p>
+    <a [routerLink]="['/albums', album.id, 'photos']">View Photos</a>
+  </p>
+</div>
