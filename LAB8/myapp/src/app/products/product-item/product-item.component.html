@@ -1,0 +1,10 @@
+<div class="product-item">
+  <div class="details">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <p>Price: ${{ product.price }}</p>
+    <p>Stock: {{ product.count }}</p>
+    <span *ngIf="!product.is_active" class="out-of-stock">Out of Stock</span>
+  </div>
+</div>
+

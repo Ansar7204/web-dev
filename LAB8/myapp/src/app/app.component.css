@@ -1,0 +1,56 @@
+
+main {
+    flex: 1 0 auto;
+    margin-bottom: 20px;
+  }
+  
+header,
+footer {
+    flex: 0 0 auto;
+  }
+
+
+.products h2{
+  text-align: center;
+}
+  
+  
+.categories {
+    background-color: #007bff; 
+    color: #fff;               
+    padding: 15px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .categories h2 {
+    margin: 0;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+  }
+  
+ 
+  .categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+  }
+  
+  
+  .categories li {
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+
+  .categories li:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05);    
+  }
+  
