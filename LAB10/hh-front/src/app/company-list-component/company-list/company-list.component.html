@@ -1,0 +1,18 @@
+<h2>Company List</h2>
+<ul>
+  <li *ngFor="let company of companies">
+    <a [routerLink]="['/companies', company.id]">
+      {{ company.name }} - {{ company.city }}
+    </a>
+  </li>
+</ul>
+
+
+<h3>Add New Company</h3>
+<form (ngSubmit)="addCompany()" #companyForm="ngForm">
+  <input [(ngModel)]="newCompany.name" name="name" placeholder="Name" required />
+  <input [(ngModel)]="newCompany.description" name="description" placeholder="Description" required />
+  <input [(ngModel)]="newCompany.city" name="city" placeholder="City" required />
+  <input [(ngModel)]="newCompany.address" name="address" placeholder="Address" required />
+  <button type="submit">Add Company</button>
+</form>

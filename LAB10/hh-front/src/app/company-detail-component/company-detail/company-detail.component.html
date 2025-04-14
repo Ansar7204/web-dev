@@ -1,0 +1,19 @@
+<h2>{{ company.name }}</h2>
+<p>{{ company.description }}</p>
+<p>{{ company.city }} - {{ company.address }}</p>
+
+<h3>Vacancies</h3>
+<ul>
+  <li *ngFor="let vacancy of vacancies">
+    {{ vacancy.name }} - ${{ vacancy.salary }}
+  </li>
+</ul>
+
+<h4>Add Vacancy</h4>
+<form (ngSubmit)="addVacancy()">
+  <input [(ngModel)]="newVacancy.name" name="name" placeholder="Name" required />
+  <input [(ngModel)]="newVacancy.description" name="description" placeholder="Description" required />
+  <input [(ngModel)]="newVacancy.salary" name="salary" placeholder="Salary" type="number" required />
+  <button type="submit">Add</button>
+</form>
+
