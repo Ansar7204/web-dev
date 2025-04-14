@@ -1,8 +1,10 @@
 from django.urls import path
+from .views import *
 from . import views
+from django.urls import path
 
 urlpatterns = [
-    path('companies/', views.company_list),
+    path('companies/', CompanyListView.as_view(), name='company-list'),
     path('companies/<int:id>/', views.company_detail),
     path('companies/<int:id>/vacancies/', views.company_vacancies),
     path('vacancies/', views.vacancy_list),

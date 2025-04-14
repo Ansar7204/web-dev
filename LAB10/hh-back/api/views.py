@@ -4,22 +4,19 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.generics import ListCreateAPIView
 from .models import Company, Vacancy
 from .serializers import CompanySerializer, VacancySerializer
 
-@api_view(['GET','POST'])
-def company_list(request):
-    if request.method == 'GET':
-        companies = Company.objects.all()
-        serializer = CompanySerializer(companies, many=True)
-        return Response(serializer.data)
+class CompanyListView(ListCreateAPIView):
+    queryset = Company.objects.all()
+    serializer_class = CompanySerializer
 
-    elif request.method == 'POST':
-        serializer = CompanySerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    def perform_create(self, serializer):
+        serializer.save()
+
+    def create(self, request, *args, **kwargs):
+        return super().create(request, *args, **kwargs)
 
 @api_view(['GET'])
 def company_detail(request, id):
@@ -46,7 +43,7 @@ def company_vacancies(request, id):
 
     elif request.method == 'POST':
         data = request.data.copy()
-        data['company'] = company.id  # inject company ID from URL
+        data['company'] = company.id  
         serializer = VacancySerializer(data=data)
         if serializer.is_valid():
             serializer.save()
